@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
- 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-
+import { HomeService } from './home/home.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { HomeComponent } from './home/home.component';
       { path: '', component: HomeComponent, pathMatch: 'full' }
     ])
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
